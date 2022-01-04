@@ -1,0 +1,77 @@
+<html>
+<head>
+
+</head>
+<body>
+<center>
+<h2>Registration Form</h2>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    <table align="center" border="1"> 
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" name="fname"></td>
+        </tr>
+        <tr>
+            <td>E-mail:</td>
+            <td><input type="email" name="mail"></td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td><input type="number" min="16" max="22" name="age"></td>
+        </tr>
+        <tr>
+            <td>Educational Qualification:</td>
+            <td>
+                <select name="edq">
+                    <option value="bcom">B.Com</option>
+                    <option value="ba">B.A.</option>
+                    <option value="bsc">B.Sc</option>
+                    <option value="btech">B.Tech</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><input type="submit" value="Submit"></td>
+        </tr>
+    </table>
+</form>
+
+<font color="red"><p id="demo"></p></font>
+<font color="red"><p id="demo1"></p></font>
+<font color="red"><p id="demo2"></p></font>
+<ul align="center" width="50%">
+    <li name="demoname"></li>
+    <li name="demoemail"></li>
+    <li name="demonumber"></li>
+    <li name="demoqul"></li>
+</ul>
+</center>
+<script>
+    function validateForm() 
+    {
+      
+      if (document.forms["myForm"]["fname"].value == "") 
+      {
+        document.getElementById("demo").innerHTML="Name field should not be blank.<br>";
+        return false;
+      }
+      if(document.forms["myForm"]["mail"].value == "")
+      {
+        document.getElementById("demo1").innerHTML="Mail field should not be blank.<br>";
+        return false;
+      }
+      if(document.forms["myForm"]["age"].value == "")
+      {
+        document.getElementById("demo2").innerHTML="Age field should not be blank.<br>";
+        return false;
+      }
+
+      document.getElementById("demoname").innerHTML=document.forms["myForm"]["fname"].value;
+
+
+    }
+    </script>
+
+</body>
+</html>

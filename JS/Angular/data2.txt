@@ -1,0 +1,39 @@
+[
+    {
+        "name" : "Govind",
+        "empid" : "RJJO199845872147",
+        "desg" : "IA",
+        "loc" : "Jodhpur"
+    },
+    {
+        "name" : "Mukesh Sharma",
+        "empid" : "RJJO202045878547",
+        "desg" : "AP",
+        "loc" : "Jaipur"
+    },
+    {
+        "name" : "SP Gurjar",
+        "empid" : "RJJO201945871258",
+        "desg" : "IA",
+        "loc" : "Chomu"
+    },
+    {
+        "name" : "Asif Khan",
+        "empid" : "RJJO201345872178",
+        "desg" : "PRG",
+        "loc" : "Balesar"
+    },
+    {
+        "name" : "Manoj Mirdha",
+        "empid" : "RJJO202045877854",
+        "desg" : "AP",
+        "loc" : "Sikar"
+    },
+    {
+        "name" : "Vikash Aggarwal",
+        "empid" : "RJJO199845872147",
+        "desg" : "IA",
+        "loc" : "Ajmer"
+    }
+]
+

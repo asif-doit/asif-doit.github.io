@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Events in Javascript</title>
+    </head>
+    <body>
+        Enter your name:<input id="fname" type="text" >
+        <p>My Name is:<span id="demo"></span> </p>
+        <script>
+            document.getElementById("fname").addEventListener("keyup",myfunction);
+            function myfunction()
+            {
+                var x=document.getElementById("fname").value;
+                //x.value=x.value.toUpperCase();
+                document.getElementById("demo").innerHTML=x;
+               
+            }
+        </script>
+    </body>
+</html>

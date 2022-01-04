@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Title goes here</title>
+</head>
+<body bgcolor="#3293a8">
+<form name="myform" action="" method="post" onsubmit="return validateform()">
+
+<table width="30%" align="center" border=1>
+<tr>
+<td>Name:</td>
+<td align="left">
+<input type="text" name="fname" id="fname"></td>
+</tr>
+<tr>
+<td>Email:</td>
+<td align="left">
+<input type="text" name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" id="email"></td>
+</tr>
+<tr>
+<td>Age:</td>
+<td align="left">
+<input type="number" min="16" max="22" name="age" id="age" ></td>
+</tr>
+<tr>
+<td>Qualification:</td>
+<td align="left"><select id="qf"  name="qf" >
+<option value="0">---Select---</option>
+<option value="Matriculation">Matriculation</option>
+<option value="10+2">10+2</option>
+<option value="Graduation">Graduation</option>
+<option value="B.Tech">B.Tech</option>
+</select>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit" id="btnSubmit">
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center"><p align="center" id="demo"></p>
+</td>
+</tr>
+</table>
+
+
+
+<script type="text/javascript">
+function validateform()
+{
+	x=document.forms["myform"]["fname"].value;
+	y=document.forms["myform"]["email"].value;
+	z=document.forms["myform"]["age"].value;
+	zz=document.forms["myform"]["qf"].value;
+	if(x=="" || y=="" || z=="" || zz=="")
+	{
+		alert("All values should be filled");
+		return false;
+	}
+	else
+	{
+		var a = "";
+		a += "</br> Name: " + x;
+		a+= "</br> Email: " + y;
+		a+= "</br> Age: " + z.toUpperCase();
+		a+= "</br> Quallification: " + zz.toUpperCase();
+		p = document.getElementById("demo");
+		p.style.color="#00008B"
+		p.innerHTML = a;
+		return false;
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Events in Javascript</title>
+    </head>
+    <body>
+        <input id="demo" type="text">
+        <script>
+            document.getElementById("demo").addEventListener("keypress",myfunction);
+            function myfunction()
+            {
+                document.getElementById("demo").style.backgroundColor="blue";
+            }
+        </script>
+    </body>
+</html>

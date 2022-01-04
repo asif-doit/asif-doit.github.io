@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>
+ 
+        </title>
+    </head>
+    <body>
+        <table style="border-color: rgb(199, 16, 199); background-color: mediumspringgreen;">
+ 
+            <tr>
+                <td>
+                    Amount:
+                </td>
+                <td>
+                    <input type="text" id="Amount">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    From:
+                </td>
+                <td>
+                    <select id="from">
+                        <option>
+                            USD:United States Dollar
+                        </option>
+                        <option>
+                            IND:Indian National Rupee
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    To:
+                </td>
+                <td>
+                    <select id="to">
+                        <option>
+                            USD:United States Dollar
+                        </option>
+                        <option>
+                            IND:Indian National Rupee
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+ 
+                </td>
+                <td>
+                    <button onclick="converter()">Calculate</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Converted Value
+                </td>
+                <td>
+                    <input type="text" id="converttxt">
+                </td>
+            </tr>
+            
+        </table>
+        <script>
+            function converter()
+            {
+                selectElement1 = document.querySelector('#from');
+                fromValue = selectElement1.value;
+                selectElement2 = document.querySelector('#to');
+                toVal = selectElement2.value;
+                if(fromValue=="USD:United States Dollar" && toVal=="USD:United States Dollar")
+                {
+                    document.getElementById("converttxt").value=document.getElementById("Amount").value;
+                }
+                if(fromValue=="IND:Indian National Rupee" && toVal=="IND:Indian National Rupee")
+                {
+                    document.getElementById("converttxt").value=document.getElementById("Amount").value;
+                }
+                else if(fromValue=="USD:United States Dollar" && toVal=="IND:Indian National Rupee")
+                {
+                    document.getElementById("converttxt").value=USDToINR();
+                }
+                else if(fromValue=="IND:Indian National Rupee" && toVal=="USD:United States Dollar")
+                {
+                    document.getElementById("converttxt").value=INRtoUSD();
+                }
+               
+
+
+
+ 
+                // else if(fromValue="IND:Indian National Rupee" && toVal="USD:United States Dollar")
+                // {
+                //     document.getElementById("convert").value=INRtoUSD();
+                // }
+ 
+                //document.getElementById("convert").value=output;
+                //alert("selected value"+output);
+            }
+            function USDToINR()
+            {
+                var amount=document.getElementById("Amount").value;
+ 
+                return amount*70;
+                
+            }
+            function INRtoUSD()
+            {
+                var amount=document.getElementById("Amount").value;
+ 
+                return amount/70;
+                
+            }
+        </script>
+    </body>
+</html>

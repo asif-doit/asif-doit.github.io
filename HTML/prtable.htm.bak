@@ -1,0 +1,81 @@
+<html>
+<title>This is my first page</title>
+<body>
+	<abbr title="Department of Information Technology">DOIT</abbr>
+	Language used for creating webpage is<del>C++</del><ins>HTML</ins>.
+<div align="center"> 
+	<cite>Learning</cite> to create a <mark bgcolor="blue">table</mark>
+	<table border=2 cellpadding=2 cellspacing=2 bgcolor=aqua width=75%>
+		<tr>
+			<th>Brand</th>
+			<th>Model</th>
+			<th>Price</th>
+		</tr>
+		<tr>
+			<td rowspan=2>Samsung</td>
+			<td>i7-G11</td>
+			<td>Rs 75000/-</td>
+		</tr>
+	<tr>
+	
+	<td>i3-G45</td>
+	<td>Rs 68000/-</td>
+	</tr>
+	<tr>
+	<td>Apple</td>
+	<td>Macbook Air</td>
+	<td><del>Rs 180000/-</del><ins>Offer Price- 120000/- Only</ins></td>
+	</tr>
+	<tr>
+	<td>Apple</td>
+	<td>Macbook Pro</td>
+	<td>Rs 250000/-</td>
+	</tr>
+	<tr>
+	<td>Lenovo</td>
+	<td>i3-G45</td>
+	<td>Rs 48000/-</td>
+	</tr>
+	<tr>
+	<td>Lenovo</td>
+	<td>i3-G15</td>
+	<td>Rs 35000/-</td>
+	</tr>
+	<tr>
+	<td>Dell</td>
+	<td>inspire Q</td>
+	<td>Rs 68000/-</td>
+	</tr>
+	<tr>
+	<td>Dell</td>
+	<td>inspire Z</td>
+	<td>Rs 72000/-</td>
+	</tr>
+	<tr>
+	<td>HP</td>
+	<td>A7</td>
+	<td>Rs 88000/-</td>
+	</tr>
+	<tr>
+	<td>HP</td>
+	<td>A2</td>
+	<td>Rs 28000/-</td>
+	</tr>
+</table>
+</div>
+
+<a href="file:///C:/Users/PM-Computer/Desktop/DotNetTraining/HTML/restro.htm">Restaurant Page</a>
+
+</br>
+<label>Battery Percentage:</label>
+<meter value=10 min=0 max=100>70 out of 100</meter></br>
+<label>Downloading:</label>
+<progress value="20" max="100" /> 
+
+ 
+
+	<footer>
+		his website is created by Information Technology and Communication Department
+	</footer>
+</body>
+</html>

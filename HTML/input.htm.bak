@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>FORM practice</title>
+</head>
+<body>
+<center>
+<h1>Student Registration Form</h1>
+<table border="1">
+<form>
+<tr>
+	<td>Name: </td>
+	<td><input name="name" value="Enter Name" size="20"> </td>
+</tr>
+<tr>	
+	<td>Email:</td>
+	<td><input name="email" value="" size="30" tooltip="plz"></td>
+</tr>
+<tr>
+
+	<td>Date of Birth:</td>
+	<td><input type="date" size="10"></td>
+</tr>
+<tr>
+	<td>Password:</td>
+	<td><input type="password" name="password" value="" size="20"></td>
+</tr>
+<tr colspan="2">
+	<td>Gender:</td>
+	<td>Male  <input type="radio" name="gender" value="male">Female<input type="radio" name="gender" value="female"></td>
+</tr>
+<tr>
+	<td  rowspan="5">Subjects:</td>
+</tr>
+<tr>
+	<td>Civil<input type="checkbox" name="Civil" value="civil"></td>
+</tr>
+<tr>
+	<td>Computer <input type="checkbox" name="Computer" value="computer"></td>
+</tr>
+<tr>
+	<td>Machenical<input type="checkbox" name="Machenical" value="mech"></td>
+</tr>
+<tr>
+	<td>Electronics<input type="checkbox" name="Electronics" value="electronics"></td>
+</tr>
+<tr>
+	<td>Course</td>
+	<td>
+		<select name="course">
+		<option value="btech">B.Tech</option>
+		<option value="ba">BA</option>
+		<option value="bcom">B.Com</option>
+		</select>
+	</td>
+</tr>
+<tr>
+	<td colspan="2">Write something about yourself:<br>
+	<textarea wrap="virtual" name="comments" rows="4" cols="25"></textarea>
+	</td>
+</tr>
+<tr>
+	<td colspan="2"><input type="submit" value="submit">
+	<input type="reset"value="reset"></td>
+</tr>
+</table>
+</pre>
+</form>
+</body>
+<footer>Created By Me</footer>
+</html>

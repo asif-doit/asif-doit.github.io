@@ -1,0 +1,172 @@
+<html>
+<title>Program to print Result Sheet</title>
+
+<body bgcolor="">
+<script type="text/javascript">  
+function getresult(){ 
+document.getElementById("lbName").innerHTML = document.getElementById("stName").value; 
+document.getElementById("lbRoll").innerHTML = document.getElementById("stRoll").value;  
+document.getElementById("lbmrPhy").innerHTML = document.getElementById("mrPhy").value;  
+document.getElementById("lbmrChem").innerHTML = document.getElementById("mrChem").value;
+document.getElementById("lbmrPhy").innerHTML = document.getElementById("mrPhy").value;
+document.getElementById("lbmrMaths").innerHTML = document.getElementById("mrMaths").value;
+
+tot = 0;
+phy = 0;
+chem = 0;
+maths = 0;
+per = 0;
+grade = "A+";
+phy = parseFloat(document.getElementById("mrPhy").value);  
+chem = parseFloat(document.getElementById("mrChem").value);  
+maths = parseFloat(document.getElementById("mrMaths").value);  
+tot = phy + chem + maths;
+per = (tot/300)*100;
+document.getElementById("lbmrTot").innerHTML = tot;
+document.getElementById("lbmrPer").innerHTML = per;
+
+if(per<40)
+{
+ grade = "Failed";
+}
+else if(per>=40 && per<50)
+{
+grade = "D";
+}
+else if(per>=50 && per<60)
+{
+grade = "C";
+}
+else if(per>=60 && per<75)
+{
+grade = "B";
+}
+else if(per>=75 && per<90)
+{
+grade = "A";
+}
+else
+{
+grade = "A+";
+}
+
+
+document.getElementById("lbmrGrade").innerHTML = grade;
+
+
+
+
+}  
+</script>  
+<form>  
+<center>
+<hr>
+<h3>Enter Result</h3>
+<table>
+<tr>
+<td>Student Name:
+</td>
+<td><input type="text" id="stName" name="stName"/>
+</td>
+<tr>
+<tr>
+<td>Roll No:
+</td>
+<td><input type="text" id="stRoll" name="stRoll"/>
+</td>
+<tr>
+<tr>
+<td colspan="2">Enter Marks in Respective Subjects
+</td>
+<tr>
+<tr>
+<td>Physics:
+</td>
+<td><input type="text" id="mrPhy" name="mrPhy"/>
+</td>
+<tr>
+<td>Chemistry:
+</td>
+<td><input type="text" id="mrChem" name="mrChem"/>
+</td>
+<tr>
+<tr>
+<td>Mathematics:
+</td>
+<td><input type="text" id="mrMaths" name="mrMaths"/>
+</td>
+<tr>
+<tr>
+<td colspan="2" align="right">
+<input type="button" value="get Result" onclick="getresult()"/>  
+</td>
+<tr>
+</table>
+
+<hr>
+<h3>Result Sheet</h3>
+<table width="20%" border="1" bgcolor="#E7E7E7">
+<tr>
+<th align="right">Details
+</th>
+<th align="left">Description
+</th>
+</tr>
+<tr>
+<td align="right">Name:
+</td>
+<td><b><label id="lbName"></br></label>
+</td>
+</tr>
+<tr>
+<td align="right">RollNo.:
+</td>
+<td><b><label id="lbRoll"></br></label>
+</td>
+</tr>
+<tr>
+<td align="right">Physics:
+</td>
+<td><b><label id="lbmrPhy"></br></label>
+</td>
+</tr>
+<tr>
+<td align="right">Chemistry:
+</td>
+<td><b><label id="lbmrChem"></br></label>
+</td>
+</tr>
+<tr>
+<td align="right">Mathematics:
+</td>
+<td><b><label id="lbmrMaths"></br></label>
+</td>
+</tr>
+<tr>
+<td align="right">Total Marks:
+</td>
+<td><b><label id="lbmrTot"></br></label>
+</td>
+</tr>
+<tr>
+<td align="right">Percentage:
+</td>
+<td><b><label id="lbmrPer"></br></label>
+</td>
+</tr>
+<tr>
+<td align="right">Grade:
+</td>
+<td><b><label id="lbmrGrade"></br></label>
+</td>
+</tr>
+</table>
+</center>
+
+</form> 
+</body>
+
+<footer>
+&copy; 2021-22 Program prepared by <mark>Ramesh</mark> <sup>THE BLOGMASTER</sup> &reg;.
+</footer>
+</html>

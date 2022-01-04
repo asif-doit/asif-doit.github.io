@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>using ajax through $http</title>
+    </head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <style>
+        table, th, td
+        {
+            border: 1px solid grey;
+            padding: 5px;
+        }
+        tr:nth-child(even)
+            {
+                background-color: grey;
+            }
+        tr:nth-child(odd)
+            {
+                background-color: white;
+            }
+    </style>
+    <body>
+        <h2>Sample using $HTTP</h2>
+        <div ng-app="" ng-controller="studentcontroller">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Employee ID</th>
+                    <th>Designation</th>
+                    <th>Location</th>
+                </tr>
+                <tr ng-repeat="student in students">
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.empid }}</td>
+                    <td>{{ student.desg}}</td>
+                    <td>{{ student.loc}}</td>
+                </tr>
+            </table>
+            <script>
+                function studentcontroller($scope,$http)
+                {
+                    var url="data2.txt";
+                    $http.get(url).success(function(response)
+                    {
+                        $scope.students = response;
+                    });
+                }
+            </script>
+        </div>
+    </body>
+</html>

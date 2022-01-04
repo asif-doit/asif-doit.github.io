@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <script>
+                d=new Date();
+                document.write("<br><b>Date:</b>"+d);
+                document.write("<br><b>Date:</b>"+d.toString());
+                document.write("<br><b>Date:</b>"+d.toUTCString());
+                document.write("<br><b>Date:</b>"+d.toDateString());
+                document.write("<br><b>Date:</b>"+d.toISOString());
+                document.write("<br><b>Today's Date:</b>"+d.getDate());
+                document.write("<br><b>Today's Day:</b>"+d.getDay());
+                document.write("<br><b>Full Year:</b>"+d.getFullYear());
+                document.write("<br><b>Hours:</b>"+d.getHours());
+                month=d.getMonth()+1;
+                document.write("<br><b>Months:</b>"+month);
+                
+                m=d.getMonth();
+                switch(m)
+                {
+                    case 0:
+                    document.write("<br><b>The Month is: January</b>");
+                    break;
+                    case 1:
+                    document.write("<br><b>The Month is: February</b>");
+                    break;
+                    case 2:
+                    document.write("<br><b>The Month is: March</b>");
+                    break;
+                    case 3:
+                    document.write("<br><b>The Month is: April</b>");
+                    break;
+                    case 4:
+                    document.write("<br><b>The Month is: May</b>");
+                    break;
+                    case 5:
+                    document.write("<br><b>The Month is: June</b>");
+                    break;
+                    case 6:
+                    document.write("<br><b>The Month is: July</b>");
+                    break;
+                    case 7:
+                    document.write("<br><b>The Month is: August</b>");
+                    break;
+                    case 8:
+                    document.write("<br><b>The Month is: September</b>");
+                    break;
+                    case 9:
+                    document.write("<br><b>The Month is: October</b>");
+                    break;
+                    case 10:
+                    document.write("<br><b>The Month is: November</b>");
+                    break;
+                    case 11:
+                    document.write("<br><b>The Month is: December</b>");
+                    break;    
+                }
+                
+                m=d.getDay();
+                switch(m)
+                {
+                    case 0:
+                    document.write("<br><b>The Day Today is: Sunday</b>");
+                    break;
+                    case 1:
+                    document.write("<br><b>The Day Today is: Monday</b>");
+                    break;
+                    case 2:
+                    document.write("<br><b>The Day Today is: Tuesday</b>");
+                    break;
+                    case 3:
+                    document.write("<br><b>The Day Today is: Wednesday</b>");
+                    break;
+                    case 4:
+                    document.write("<br><b>The Day Today is: Thursday</b>");
+                    break;
+                    case 5:
+                    document.write("<br><b>The Day Today is: Friday</b>");
+                    break;
+                    case 6:
+                    document.write("<br><b>The Day Today is: Saturday</b>");
+                    break;  
+                }
+                document.write("<b><br><br><br><br><br><br>");
+                d=new Date();
+                month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+                document.write("<b><br>Current Month is :"+month[d.getMonth()]);
+                d.setMonth(4); 
+                document.write("<b><br>Added Months:"+d.getMonth());
+                document.write("<b><br>After Adding Months, Now Month is:"+month[d.getMonth()]);
+            </script>
+        </div>
+    </body>
+</html>

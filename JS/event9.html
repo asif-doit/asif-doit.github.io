@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>On Click Event!</title>
+
+    </head>
+    <body>
+        Text 1:<input type="text" id="field1" value="Hello world!"><br>
+        Text 2:<input type="text" id="field2"><br>
+        <button onclick="myfunction()">Copy</button>
+
+        <script>
+            function myfunction()
+            {
+                document.getElementById("field2").value=document.getElementById("field1").value;
+            }
+        </script>
+
+        <p>Click on button to Date And Time</p>
+        <button onclick="getElementById("demo").innerHTML=Date();">Click Me!</button> <br>
+        <p id="demo"> </p>      
+        
+    </body>
+</html>

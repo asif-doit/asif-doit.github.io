@@ -1,0 +1,45 @@
+<html>
+<title>Program to find factorial of a given number.</title>
+<body>
+<font face="verdana">
+<form>
+<script type="text/javascript">
+function myfun(){
+num = document.getElementById("txtNum").value;
+
+fact = 1;
+for(i=1; i<=num; i++)
+{
+   fact = fact * i;
+}
+document.getElementById("lblResult").innerHTML = fact;
+}
+</script>
+<center>
+<h3>&emsp; &emsp; &emsp;Program to find factorial of a given number.</h3>
+<table cellpadding="5" cellspacing="5">
+<tr><td>
+<label>Enter number to find factorial: </label></td>
+<td><input type="text" name="txtNum" id="txtNum" placeholder="Enter number to find factorial" /></td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<input type="button" onclick="myfun()" value="Find factorial" />
+</td>
+</tr>
+<tr>
+<td>
+<label><h3>Factorial of given number is: </h3></label></td>
+<td><h3><mark><label id="lblResult"></label></mark></h3></td>
+</tr>
+</table>
+<p align="right"> <a href="Assign1.htm"><--Back to assignments.</a></p>
+</center>
+</form>
+</font>
+<hr>
+</body>
+<footer>
+&copy; 2021-22 Program prepared by <mark>Ramesh</mark> <sup>THE BLOGMASTER</sup> &reg;.
+</footer>
+</html>

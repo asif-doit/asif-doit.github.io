@@ -1,0 +1,18 @@
+[
+    {
+        "name" : "amit kumar",
+        "rollno" : 101,
+        "percentage" : "89%"
+    },
+    {
+        "name" : "binod kumar",
+        "rollno" : 102,
+        "percentage" : "86%"
+    },
+    {
+        "name" : "dinkar kumar",
+        "rollno" : 103,
+        "percentage" : "76%"
+    }
+
+]

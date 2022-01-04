@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>Currency Converter</title>
+        <style>
+            body
+            {
+                background-color: #008CBA; 
+            }
+            table 
+            {
+                background-color: #008CBA;
+                border: 1px solid white;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            td
+            {
+                align-content: center;
+                text-align: left;
+                font-size: 20px;
+                border: 2px solid white;
+                padding: 10px;
+            }
+            button 
+            {
+                background-color: white;
+                color: #008CBA;
+                font-size: 18px;
+                padding: 6px 25px;
+                margin-top: 4px;
+                border-radius: 5px;
+            }
+            label
+            {
+                color: white;
+            }
+            h1
+            {
+                color: white;
+                text-align: center;
+            }
+            td.lab
+            {
+                color: white;
+            }
+            input[type=text] 
+            {
+                border: 2px solid rgb(255, 255, 255);
+                border-radius: 14px;
+                background-color:#008CBA;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>USD to INR Converter</h1>
+        <table>
+            <tr>
+                <td class="lab">Amount:</td>
+                <td><input type="text" id="cur"></td>
+            </tr>
+            <tr>
+                <td class="lab">From:</td>
+                <td>
+                    <select style=" border: 2px solid rgb(255, 255, 255);
+                    border-radius: 4px;
+                    background-color:#008CBA;
+                    color: white;" id="fromSel">
+                        <option value="usd">US Dollar</option>
+                        <option value="inr">Indian Rupee</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="lab">To:</td>
+                <td>
+                    <select style=" border: 2px solid rgb(255, 255, 255);
+                    border-radius: 4px;
+                    background-color:#008CBA;
+                    color: white;" id="toSel">
+                        <option value="usd">US Dollar</option>
+                        <option value="inr">Indian Rupee</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><button onclick="convert();">Calculate</button></td>
+                <td><button type="reset">Reset</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label id="res"></label></td>
+            </tr>
+           
+        </table>
+        
+        <script>
+            function convert()
+            {
+                if(document.getElementById("cur").value.length<1)
+                {
+                    document.getElementById("res").innerHTML="Enter Amount in Textbox.";    
+                }
+                else{
+                if(document.getElementById("fromSel").value==document.getElementById("toSel").value)
+                {
+                    document.getElementById("res").innerHTML="Both Currency Type is Same.";
+                }
+                else
+                {
+                    if(document.getElementById("fromSel").value=="usd")
+                    {
+                        var x = document.getElementById("cur").value;
+                        x=parseFloat(x);
+                        document.getElementById("res").innerHTML="Total Value of Dollars in Indian Rupees:"+x*75;
+
+                    }
+                    else
+                    {
+                        var x = document.getElementById("cur").value;
+                        x=parseFloat(x);
+                        document.getElementById("res").innerHTML="Total Value of Indian Rupees in Dollars:"+x/75;
+                    }
+                }
+            }}
+            
+            
+        </script>
+        </div>    
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>On Copy Cut Event</title>
+    </head>
+    <body>
+        Cut  Copy From Here:<input type="text" oncut="myfunction()" o oncopy="myfunction1()" value="Try to cut this text."><br>
+        <p ondblclick="myfunction2()">Double Click on this paragraph.</p>
+        <p id="demo"></p>
+        <script>
+            function myfunction()
+            {
+                document.getElementById("demo").innerHTML="You have cut Text";
+            }
+            function myfunction1()
+            {
+                document.getElementById("demo").innerHTML="You have copy Text";
+            }
+            function myfunction2()
+            {
+                document.getElementById("demo").innerHTML="You have Double Clicked on above paragraph.";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Angular JS HTML</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body>
+        <h2>Angular JS DOM</h2>
+        <div ng-app="">
+            <table border="1">
+                <tr>
+                    <td><input type="checkbox" ng-model="enabledisablebutton">Disable Button</td>
+                    <td><button ng-disabled="enabledisablebutton">Click Me!</button> </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="showhide1">Show Button</td>
+                    <td><button ng-show="showhide1">Show me!</button> </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="showhide2">Hide Button</td>
+                    <td><button ng-hide="showhide2">Hide me!</button> </td>
+                </tr>
+                <tr>
+                    <td><p>Total Click:{{clickCounter}}</p></td>
+                    <td><button ng-click="clickCounter=clickCounter+1">Click Me!</button> </td>
+                </tr>
+
+            </table>
+        </div>
+    </body>
+</html>

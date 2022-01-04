@@ -1,0 +1,11 @@
+<html>
+<head>
+<title>Frameset Practice</title>
+</head>
+<body>
+	<frameset cols="30%","40%","30%">
+		<frame name="left" src"home.htm" />
+		<frame name"center" src="samsung.htm" />
+		<frame name="right" src="restro.htm" />
+</body>
+</html>

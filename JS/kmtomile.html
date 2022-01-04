@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Miles Calculator</title>
+</head>
+<body bgcolor="#F0F0F0">
+<center>
+<h2>Kilometer to Miles</h2>
+<table border="1" width="30%">
+<tr>
+<th>Kilometer to Miles</th>
+</tr>
+<tr>
+<td align="center"><input type="text" id="txtK"/></td>
+</tr>
+<tr>
+<td align="center"><input type="button" onclick="funF()" value="Get Miles" id="btnFC" name="a"/></td>
+<tr>
+<td align="center"><input type="text" id="txtR"/></td>
+</tr>
+</tr>
+</table>
+</center>
+<script type="text/javascript">  
+function funF()
+{
+	k = parseFloat(document.getElementById("txtK").value);
+	m = k/1.609;
+	document.getElementById("txtR").value = m;
+}
+</script>
+</body>
+</html>

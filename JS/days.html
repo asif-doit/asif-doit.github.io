@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>JS Date Fun() Practice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+           
+                d=new Date();
+                
+                //days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+                document.write("<b><br>Date today is :"+d.getDate());
+                addDays=10;
+                d.setDate(d.getDate()+addDays); 
+                document.write("<b><br>Added Dates:"+addDays );
+                document.write("<b><br>After Adding Date, Now Date is: "+d.getDate());
+                document.write("<b><br><br><br><br>");
+                addDays1=28;
+                addDays2=56;
+                addDays3=84;
+                
+                z=new Date();
+                document.write("<b><br>Date today is :"+z.toDateString());
+                
+                smallPlan=new Date();
+                smallPlan.setDate(smallPlan.getDate()+addDays1);
+                document.write("<b><br>28 Days Plan Expires on :"+smallPlan.toDateString());
+                
+                bigPlan=new Date();
+                bigPlan.setDate(bigPlan.getDate()+addDays2); 
+                document.write("<b><br>56 Days Plan Expires on :"+bigPlan.toDateString());
+                
+                biggerPlan=new Date();
+                biggerPlan.setDate(biggerPlan.getDate()+addDays3); 
+                document.write("<b><br>84 Days Plan Expires on :"+biggerPlan.toDateString());
+                
+        </script>
+    </body>
+</html>

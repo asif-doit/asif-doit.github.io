@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>Button</title>
+      <!--  <style>
+            table, th, td
+            {
+                border: 2px solid red;
+                color:rgb(27, 75, 31);
+                padding: 10px;
+                text-align: center;
+                font-size: 20px;
+                border-radius: 5px;
+                
+            }
+            table
+            {
+                border-collapse: none;
+                width: auto;
+                align-self: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            th, td
+            {
+                height: 70px;
+                background-color: aqua;
+            }
+            tr:hover td
+            {
+                background-color: rgb(156, 156, 224);
+            }
+            h2{
+                float: center;
+            }
+        </style> -->
+        <style>
+            table{
+                border-collapse: collapse;
+                width: 50%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            th,td{
+                text-align: left;
+                padding: 10px;
+            }
+            tr:nth-child(even)
+            {
+                background-color: #d1444488;
+            }
+            h2
+            {
+                text-align: center;
+            }
+        </style>
+        <script>
+            function getYos(d) 
+            {
+                var today = new Date();
+                var yos = today.getFullYear() - d;
+                return yos;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Styling Of Table</h2>
+        <table>
+            <tr>
+                <th>Sr No.</th>
+                <th>Name</th>
+                <th>Employee ID</th>
+                <th>D.O.J.</th>
+                <th>HomeTown</th>
+                <th>NoYears in Service</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Govind</td>
+                <td>RJJO199845872147</td>
+                <td>17-12-1998</td>
+                <td>Jaipur</td>
+                <td><script>document.write(getYos(1998));</script></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mukesh Sharma</td>
+                <td>RJJO202045872147</td>
+                <td>10-02-2011</td>
+                <td>Jaipur</td>
+                <td><script>document.write(getYos(2011));</script></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>SP Gurjar</td>
+                <td>RJJO201945872147</td>
+                <td>17-12-2019</td>
+                <td>Jaipur</td>
+                <td><script>document.write(getYos(2019));</script></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Asif Khan</td>
+                <td>RJJO202045872147</td>
+                <td>09-11-2020</td>
+                <td>Jaipur</td>
+                <td><script>document.write(getYos(2020));</script></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Vikash Aggarwal</td>
+                <td>RJJO201345872147</td>
+                <td>17-12-2013</td>
+                <td>Jaipur</td>
+                <td><script>document.write(getYos(2013));</script></td>
+            </tr>
+        </table>
+    </body>
+</html>

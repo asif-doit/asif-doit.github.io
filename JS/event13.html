@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Anchor</title>
+    </head>
+    <body onhashchange="myfunction()">
+        <button onclick="changepart()">Click to change</button>
+        <button onclick="changepart2()">Click to change</button>
+        <p id="demo"></p>
+        <script>
+            function changepart()
+            {
+                location.hash="part5";
+                var x = location.hash;
+                document.getElementById("demo").innerHTML="The anchor part is now:"+x;
+            }
+            function changepart2()
+            {
+                location.hash="part4";
+                var x = location.hash;
+                document.getElementById("demo").innerHTML="The anchor part is now:"+x;
+            }
+            function myfunction()
+            {
+                alert("The anchor part is changed.");
+            }
+        </script>
+    </body>
+</html>

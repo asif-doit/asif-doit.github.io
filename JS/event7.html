@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Exploring on change!</title>
+
+    </head>
+    <body>
+        Enter Some Text:<input type="text" name="txt" value="Hello" onchange="myfunction(this.value)">
+
+        <script>
+            function myfunction(val)
+            {
+                alert("The input value is changed. New Value is -"+val);
+            }
+        </script>
+    </body>
+</html>

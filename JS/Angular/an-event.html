@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Angular JS Events</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+        <style>
+            table,th,td
+            {
+                border : 1px solid grey;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Events in Angular JS</h2>
+        <div ng-app="" ng-controller="studentcontroller">
+            <form name="studentform" novalidate>
+                <table>
+                    <tr>
+                        <td>Enter first name:</td>
+                        <td><input name="firstname" type="text" ng-model="firstname" required>
+                            <span style="color:red;" ng-show="studentform.firstname.$dirty && studentform.firstname.$invalid">
+                            <span ng-show="studentform.firstname.$error.required">First Name is required</span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Enter last name: </td>
+                        <td><input name="lastname" type="text" ng-model="lastname" required>
+                            <span style="color:red;" ng-show="studentform.lastname.$dirty && studentform.lastname.$invalid">
+                            <span ng-show="studentform.lastname.$error.required">Last Name is required</span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Enter Email: </td>
+                        <td><input name="email" type="email" ng-model="email" length="75" required>
+                            <span style="color:red;" ng-show="studentform.email.$dirty && studentform.email.$invalid">
+                            <span ng-show="studentform.email.$error.required">Email is required</span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button ng-click="reset()">Reset</button>
+                        </td>
+                        <td>
+                            <button ng-disabled="studentform.firstname.$dirty && studentform.firstname.$invalid || 
+                                                 studentform.lastname.$dirty && studentform.lastname.$invalid || 
+                                                 studentform.email.$dirty && studentform.email.$invalid" 
+                                                 ng-click="submit()">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <script>
+                function studentcontroller($scope)
+                {
+                    $scope.reset=function()
+                    {
+                        $scope.firstname="Asif";
+                        $scope.lastname="Khan";
+                        $scope.email="asifkhan@gmail.com";
+                    }
+                    $scope.reset();
+                }
+            </script>
+        </div>
+    </body>
+</html>

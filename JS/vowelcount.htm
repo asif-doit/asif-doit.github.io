@@ -1,0 +1,40 @@
+<html>
+<body>
+<h1>Number of Vowels</h1>
+<p>Prepare yourself for loop and switch case.</p>
+<script>
+	name="Asif Khan";
+	len=name.length;
+	
+	for(i=0;i<len;i++)
+	{
+		b=name.charCodeAt(i);
+		document.write(b); //temp
+		vc=0;
+		ivc=0;
+		if(b<=122)
+		{
+			vc++;
+			
+		}
+		else
+		{
+			ivc++;
+		}
+	}
+	
+	if(ivc>0)
+	{
+		document.write("Invalid Entry");
+	}
+	else
+	{
+		document.write("valid Entry");
+	}
+	
+	
+document.write("<br><br>Browser inner window width: " + window.innerWidth + "px<br>" +"Browser inner window height: " + window.innerHeight + "px");
+</script>
+
+</body>
+</html>

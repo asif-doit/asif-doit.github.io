@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>On Click Event!</title>
+
+    </head>
+    <body>
+        <h2>Temprature Conversion</h2>
+        <table border="1" bgcolor="#008CBA">
+            <tr>
+                <td>Enter Temprature in Celcius:<br><input type="text" id="num1"></td>
+                <td>Enter Temprature in Farheneit:<br><input type="text" id="num2"></td>
+            </tr>
+            <tr>
+                <td bgcolor=#4CAF50>Temprature in Fahrenheit: <label id="cel"></label></td>
+                <td bgcolor=#4CAF50>Temprature in Celcius: <label id="far"></label></td>
+            </tr>
+            <tr>
+                <td><button id="celToFar" onclick="toFar()">Convert Celcius to Fahrenheit</button></td>
+                <td><button id="farToCel" onclick="toCel()">Convert Fahrenheit to Celcius</button></td>
+            </tr>
+        </table>
+        <script>
+            function toFar()
+            {
+                var x = document.getElementById("num1").value;
+                x=parseFloat(x);
+                document.getElementById("cel").innerHTML=x*9/5+32;
+            }
+            function toCel()
+            {
+                var y = document.getElementById("num2").value;
+                y=parseFloat(y);
+                document.getElementById("far").innerHTML=(y-32)*5/9;
+            }
+            
+        </script>
+    </body>
+</html>

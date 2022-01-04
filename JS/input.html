@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>User Input</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <script>
+                name=window.prompt("Enter Your Name:");
+                d=new Date();
+                if(d.getHours()<=12)
+                {
+                    alert("Good Morning : "+name);
+                }
+                else if(d.getHours() >=12 && d.getHours() <=15 )
+                {
+                    alert("Good Afternoon : "+name);
+                }
+                else
+                {
+                    alert("Good Evening : "+name);
+                }
+            </script>
+        </div>
+    </body>
+</html>

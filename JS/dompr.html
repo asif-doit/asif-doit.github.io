@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title id="tit1">TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="titlechange()">
+        <h1 id="one">Welcome</h1>
+        <p id="demo">This is welcome message.</p>
+        <h2 id="two">Technology :- Javascript</h2>
+        <button onclick="titlechangeagain();">Click to Change Page Title</button>
+        
+        <script>
+            var text=document.getElementById("one").innerHTML;
+            alert("The first Heading is: "+text);
+            var text2=document.getElementById("two").innerHTML;
+            alert("The second Heading is: "+text2);
+            
+            document.getElementById("demo").innerHTML = "Learning DOM";
+           
+            function titlechange()
+            {
+                document.getElementById("tit1").innerHTML = "Learning DOM";
+            }
+            function titlechangeagain()
+            {
+                document.getElementById("tit1").innerHTML = "Learning DOM - Again Title Changed";
+            }
+        </script>
+        <p id="demo"></p>
+
+<p><b>Note: </b>If the port number is default (80 for http and 443 for https), most browsers will display 0 or nothing.</p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"The URL port number of the current page is: " + window.location.port;
+</script>
+    </body>
+</html>

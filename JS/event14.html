@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Working on Form</title>
+    </head>
+    <body>
+        <form action="" method="get">
+            Number:<input type="number" id="myinput" name="quantity" min="1" max="5" required>
+            <input type="submit" value="submit">
+
+        </form>
+        <script>
+            document.getElementById("myinput").addEventListener("invalid",myfunction)
+            function myfunction()
+            {
+                alert("You must enter value between 1 to 5. You Entered:-"+this.value);
+            }
+        </script>
+    </body>
+</html>

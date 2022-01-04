@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>
+            Angular JS Module
+        </title>
+        <style>
+            table
+            {
+                border: 1px solid grey;
+            }
+            table.t1{
+                width: 100%;
+            }
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+        <script src="mainapp.js"></script>
+        <script src="studentcontroller.js"></script>
+    </head>
+    <body>
+        <h2>Angular JS Module</h2>
+        <div ng-app="mainapp" ng-controller="studentcontroller">
+            <table>
+                <tr>
+                    <td>Enter first name:</td>
+                    <td><input type="text" ng-model="student.firstname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter last name: </td>
+                    <td><input type="text" ng-model="student.lastname"></td>
+                </tr>
+                <tr>
+                    <td>Enter fees: </td>
+                    <td><input type="text" ng-model="student.fees"></td>
+                </tr>
+                <tr>
+                    <td>Enter subject: </td>
+                    <td><input type="text" ng-model="subjectname"></td>
+                </tr>
+                <tr>
+                    <td>Subject</td>
+                    <td>
+                        <table class="t1">
+                            <tr>
+                                <th>Name</th>
+                                <th>marks</th>
+                            </tr>
+                            <tr ng-repeat="subject in student.subjects | orderBy:'marks' | filter: subjectname">
+                                <th>{{subject.name}}</th>
+                                <th>{{subject.marks}}</th>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <!-- <table border="1">
+                <tr>
+                    <td>Name in Upper Case: </td>
+                    <td>{{student.fullname() | uppercase}}</td>
+                </tr>
+                <tr>
+                    <td>Name in Lower Case: </td>
+                    <td>{{student.fullname() | lowercase}}</td>
+                </tr>
+                <tr>
+                    <td>fees: </td>
+                    <td>{{student.fees | currency}}</td>
+                </tr>
+                <tr>
+                    <td>Subject:</td>
+                    <td>
+                        <ul>
+                            <li ng-repeat="subject in student.subjects |
+                        filter: subjectname |orderBy:'marks'">
+                        {{ subject.name + ', marks:' + subject.marks }}
+                        </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table> -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Selecting Options</title>
+    </head>
+    <body>
+        <p>Your total shopping value:</p>
+        <select id="myselect" onchange="myfunction()">
+            <option value="4">More than 10000</option>
+            <option value="3">More than 5000 and Less than 10000</option>
+            <option value="2">Less than 5000</option>
+        </select>
+        <p id="demo"></p>
+        <script>
+            function myfunction()
+            {
+                var x=document.getElementById("myselect").value;
+                if(x==4)
+                {
+                    document.getElementById("demo").innerHTML="You got 25% Discount.";    
+                }
+                else if(x==3)
+                {
+                    document.getElementById("demo").innerHTML="You got 20% Discount.";    
+                }
+                else if(x==2)
+                {
+                    document.getElementById("demo").innerHTML="You got 7% Discount.";    
+                }
+                
+            }
+        </script>
+    </body>
+</html>

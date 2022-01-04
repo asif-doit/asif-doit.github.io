@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Displaying keypress</title>
+    </head>
+    <body onkeypress="DisplayKey(event)">
+        <h1>Displaying Typed Characters</h1>
+        <p>We are using script that displays chars as we type</p>
+        <p id="keys"></p>
+        <script>
+            function DisplayKey(e)
+            {
+                if(e.keyCode)
+                {
+                    keycode=e.keyCode;
+                }
+                else
+                {
+                    keycode=e.which;
+                }
+                character=String.fromCharCode(keycode);
+                document.getElementById("keys").innerHTML=character;
+            }
+        </script>
+    </body>
+</html>

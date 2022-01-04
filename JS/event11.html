@@ -1,0 +1,17 @@
+Enter temprature in Number:<input type="text" id="num1"><br>
+        Enter second Number:<input type="text" id="num2"><br>
+        <button onclick="myfunction()">Click Me!</button> <br>
+        <input type="text" id="num3">       
+        
+
+        <script>
+            function myfunction()
+            {
+                var x=document.getElementById("num1").value;
+                var y=document.getElementById("num2").value;
+                x=parseFloat(x);
+                y=parseFloat(y);
+                z=x+y;
+                document.getElementById("num3").value=z;
+            }
+        </script>
