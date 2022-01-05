@@ -20,7 +20,7 @@
     {
         "name" : "Asif Khan",
         "empid" : "RJJO201345872178",
-        "desg" : "PRG",
+        "desg" : "IA",
         "loc" : "Balesar"
     },
     {
@@ -32,7 +32,7 @@
     {
         "name" : "Vikash Aggarwal",
         "empid" : "RJJO199845872147",
-        "desg" : "IA",
+        "desg" : "SA",
         "loc" : "Ajmer"
     }
 ]
